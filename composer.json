@@ -1,0 +1,8 @@
+{
+    "require-dev": {
+        "symfony/var-dumper": "^6.3"
+    },
+    "require": {
+        "symfony/validator": "^6.3"
+    }
+}
