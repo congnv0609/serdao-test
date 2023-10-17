@@ -32,8 +32,11 @@ class UserController extends AbstractController
         //     return new Response((string) $errors, 400);
         // }
         
-        $entityManager->persist($user);
-        $entityManager->flush();
+        if(!empty($user->getData())){
+            $entityManager->persist($user);
+            $entityManager->flush();
+        }
+        
         return $this->redirectToRoute('user-list');
     }
 
